@@ -69,7 +69,8 @@ public class ChooseSettings<T> {
     func choiceWithIntValue(_ value: Int) -> T? {
         let index = value - 1
         if index >= 0 && index < choices.count {
-            return choices[index].callback()
+//            return choices[index].callback()
+            return nil
         }
         
         return nil
@@ -78,7 +79,8 @@ public class ChooseSettings<T> {
     func choiceWithStringValue(_ value: String) -> T? {
         let possibleIndex = choices.index { $0.choice == value }
         if let index = possibleIndex {
-            return choices[index].callback()
+//            return choices[index].callback()
+            return nil
         }
         
         return nil
